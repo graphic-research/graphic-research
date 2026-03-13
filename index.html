@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GRAPHIC RESEARCH - R&D studio building software and exploring generative AI">
+    <title>GRAPHIC RESEARCH</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="resources/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-229YLX28EE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-229YLX28EE');
+    </script>
+</head>
+<body>
+
+
+<header class="hero">
+        <h1 class="hero-title">
+            <span class="hero-title-line">Graphic</span>
+            <span class="hero-title-line">Research</span>
+        </h1>
+        <p class="hero-sub">Exploring the frontier of generative AI — one experiment, one product at a time.</p>
+    </header>
+
+    <main>
+        <section class="s" id="about">
+            <h2>About</h2>
+            <div class="s-cols">
+                <div class="s-col">
+                    <p class="s-lead">A new era is unfolding. We're here to meet it head-on.</p>
+                </div>
+                <div class="s-col">
+                    <p>Graphic Research is an independent R&D studio preparing for what's next. We study the technologies reshaping how we see and create — and turn that research into products that are ready for the world ahead.</p>
+                </div>
+            </div>
+            <figure class="img-block">
+                <img src="images/generated_img.jpeg" alt="AI-generated image" loading="lazy" />
+                <figcaption>Midjourney output</figcaption>
+            </figure>
+        </section>
+
+        <section class="s" id="principles">
+            <h2>Principles</h2>
+            <div class="principles-grid">
+                <div class="principle">
+                    <strong>Research First</strong>
+                    <p>We understand before we build. Every product starts with a question, not a spec.</p>
+                </div>
+                <div class="principle">
+                    <strong>Ship It</strong>
+                    <p>Research that stays in a notebook is just a hobby. We turn insights into working software.</p>
+                </div>
+                <div class="principle">
+                    <strong>Stay Independent</strong>
+                    <p>No outside pressure, no shortcuts. We move at our own pace and answer to the work itself.</p>
+                </div>
+                <div class="principle">
+                    <strong>Open by Default</strong>
+                    <p>Share what we learn. The best ideas grow when they're out in the open.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s" id="products">
+            <h2>Products</h2>
+            <div class="card-grid">
+                <a href="https://macshutter.com" target="_blank" rel="noopener noreferrer" class="card">
+                    <strong>MacShutter</strong>
+                    <span>Screenshot & recording for macOS</span>
+                </a>
+                <a href="https://stockpolly.com" target="_blank" rel="noopener noreferrer" class="card">
+                    <strong>StockPolly</strong>
+                    <span>AI portfolio analysis & timing</span>
+                </a>
+                <a href="https://koreaplace.info" target="_blank" rel="noopener noreferrer" class="card">
+                    <strong>KoreaPlace</strong>
+                    <span>Curated Seoul spots guide</span>
+                </a>
+                <a href="https://horangplayer.com" target="_blank" rel="noopener noreferrer" class="card">
+                    <strong>HorangPlayer</strong>
+                    <span>Open-source macOS video player</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="s s--cta" id="connect">
+            <p class="cta-heading">Let's connect.</p>
+            <p class="cta-sub">Research, consulting, partnerships, or just a conversation.</p>
+            <a href="mailto:contact@graphic-research.com" class="cta-link">contact@graphic-research.com &rarr;</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <span>&copy; 2026 GRAPHIC RESEARCH</span>
+        </div>
+        <div class="footer-right">
+            <span>2F-J17, 505 Gosanja-ro, Dongdaemun-gu, Seoul</span>
+            <span>Founder Sangwon Lee &middot; Brn. 466-87-03251</span>
+            <a href="https://www.linkedin.com/in/james-l-e-e/" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a>
+        </div>
+    </footer>
+
+    <script>
+        // hero 애니메이션 끝난 뒤(1s) 스크롤 reveal 시작
+        const heroDelay = 1000;
+
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        setTimeout(() => {
+            document.querySelectorAll('.s, .card').forEach(el => obs.observe(el));
+        }, heroDelay);
+    </script>
+</body>
+</html>
